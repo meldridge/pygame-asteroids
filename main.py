@@ -52,8 +52,16 @@ def main():
 
         pygame.display.flip()
 
-        # Wait for next frame
+        # Update: wait for next frame
         dt = clock.tick(60) / 1000
+
+        # Process collisions
+        for asteroid in asteroids:
+            if player.isColliding(asteroid):
+                # Oh no!
+                print("Game over!")
+                exit()
+    
 
 if __name__ == "__main__":
     main()
