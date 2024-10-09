@@ -70,7 +70,7 @@ def main():
                 if bullet.isColliding(asteroid):
                     # This asteroid has been shot!
                     bullet.kill()
-                    asteroid.kill()
+                    asteroid.split()
 
 
 if __name__ == "__main__":
